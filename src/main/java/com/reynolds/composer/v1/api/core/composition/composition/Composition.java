@@ -1,4 +1,4 @@
-package com.reynolds.api.core.composition;
+package com.reynolds.composer.v1.api.core.composition.composition;
 
 import jakarta.persistence.*;
 

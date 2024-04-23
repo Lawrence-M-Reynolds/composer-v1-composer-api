@@ -1,4 +1,4 @@
-package com.reynolds.api.core.generator;
+package com.reynolds.composer.v1.api.core.generator.generator;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;

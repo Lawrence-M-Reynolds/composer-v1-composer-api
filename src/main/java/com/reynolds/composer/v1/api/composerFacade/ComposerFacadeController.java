@@ -1,6 +1,6 @@
-package com.reynolds.api.composerFacade;
+package com.reynolds.composer.v1.api.composerFacade;
 
-import com.reynolds.api.core.composition.Composition;
+import com.reynolds.composer.v1.api.core.composition.composition.Composition;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
