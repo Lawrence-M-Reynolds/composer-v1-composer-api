@@ -29,7 +29,7 @@ public interface CompositionController {
     }
 
     @GetMapping("/{compositionId}")
-    default ResponseEntity<Void> getComposition(@PathVariable("compositionId") int compositionId) {
+    default ResponseEntity<Composition> getComposition(@PathVariable("compositionId") long compositionId) {
         throw new UnsupportedOperationException();
     }
 
