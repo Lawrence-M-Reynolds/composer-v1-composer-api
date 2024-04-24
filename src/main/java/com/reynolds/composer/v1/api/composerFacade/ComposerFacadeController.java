@@ -20,6 +20,9 @@ public interface ComposerFacadeController {
     @PostMapping("/fileUpload")
     ResponseEntity<Composition> uploadFile (@RequestParam("file") MultipartFile file) throws IOException;
 
+    @PostMapping("/processComposition")
+    ResponseEntity<Void> processComposition (@RequestParam("compositionId") long compositionId) throws IOException;
+
     @GetMapping
     List<Composition> getCompositions();
 
