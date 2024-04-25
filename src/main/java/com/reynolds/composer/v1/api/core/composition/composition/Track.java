@@ -20,6 +20,14 @@ public class Track {
 
     public Track() {}
 
+    /** Copy constructor. */
+    public Track(Track track) {
+        this.id = track.id;
+        this.trackNumber = track.trackNumber;
+        this.name = track.name;
+        this.midiNotes = track.midiNotes;
+    }
+
     public Track(Integer trackNumber, String name, String midiNotes) {
         this(null, trackNumber, name, midiNotes);
     }

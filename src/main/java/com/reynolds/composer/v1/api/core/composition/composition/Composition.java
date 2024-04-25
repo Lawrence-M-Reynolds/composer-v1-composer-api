@@ -2,6 +2,7 @@ package com.reynolds.composer.v1.api.core.composition.composition;
 
 import jakarta.persistence.*;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -18,6 +19,17 @@ public class Composition {
     private List<Track> tracks;
 
     public Composition() {}
+
+    /** Copy constructor. */
+    public Composition(Composition composition) {
+        this(null,
+                composition.getName(),
+                composition.getTracks()
+                        .stream()
+                        .map(Track::new)
+                        .toList()
+        );
+    }
 
     public Composition(String name, List<Track> tracks) {
         this(null, name, tracks);
