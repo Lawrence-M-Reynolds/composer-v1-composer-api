@@ -1,16 +1,13 @@
 package com.reynolds.composer.v1.api.core.composition.composition.generated;
 
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Version;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.annotation.Version;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection = "compositionVariation")
 public class CompositionVariation {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private String compositionVariationId;
 
     private Long originalCompositionId;
