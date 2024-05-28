@@ -15,10 +15,10 @@ import java.util.List;
 public interface ComposerFacadeController {
 
     @GetMapping("/{compositionId}")
-    ResponseEntity<Composition> getComposition(@PathVariable("compositionId") int compositionId);
+    Mono<Composition> getComposition(@PathVariable("compositionId") int compositionId);
 
     @PostMapping("/fileUpload")
-    ResponseEntity<Composition> uploadFile (@RequestParam("file") MultipartFile file) throws IOException;
+    Mono<Composition> uploadFile (@RequestParam("file") MultipartFile file) throws IOException;
 
     @PostMapping("/processComposition")
     Mono<List<String>> processComposition (@RequestParam("compositionId") long compositionId) throws IOException;
@@ -30,8 +30,6 @@ public interface ComposerFacadeController {
     Flux<CompositionVariation> getGeneratedVariations(@PathVariable("compositionId") long compositionId) throws IOException;
 
     @GetMapping
-    List<Composition> getCompositions();
+    Flux<Composition> getCompositions();
 
-    @GetMapping("/test")
-    String testEndpoint();
 }
